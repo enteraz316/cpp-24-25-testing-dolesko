@@ -57,7 +57,7 @@ int main() {
         run_test("push 100\npop\npop\nexit\n", "ok\n100\nerror\nbye\n", "11");
         run_test("push test\npush test\npop\npop\npop\nexit\n", "ok\nok\ntest\ntest\nerror\nbye\n", "12");
         run_test("push a\npush b\npush c\npush d\npush e\npush f\nsize\nexit\n", "ok\nok\nok\nok\nok\nok\n6\nbye\n", "13");
-        run_test("push one\nback\npush two\nback\npush three\nback\nexit\n", "ok\none\nok\ntwo\nok\nthree\nbye\n", "14");
+        run_test("push one\nback\npush TWO\nback\npush three\nback\nexit\n", "ok\none\nok\nTWO\nok\nthree\nbye\n", "14");
         run_test("clear\npush 1\npop\nexit\n", "ok\nok\n1\nbye\n", "15");
         run_test("push longstring\npush anotherlongstring\nsize\npop\nback\nexit\n", "ok\nok\n2\nanotherlongstring\nlongstring\nbye\n", "16");
         run_test("push 42\npush 43\npush 44\npop\npop\nsize\nexit\n", "ok\nok\nok\n44\n43\n1\nbye\n", "17");
@@ -67,7 +67,7 @@ int main() {
         run_test("push abc\npush def\npush ghi\npop\npop\npop\nsize\nexit\n", "ok\nok\nok\nghi\ndef\nabc\n0\nbye\n", "21");
         run_test("push top\nback\nclear\npush new\nback\nexit\n", "ok\ntop\nok\nok\nnew\nbye\n", "22");
         run_test("push stack\nsize\npop\nsize\nexit\n", "ok\n1\nstack\n0\nbye\n", "23");
-        run_test("push hello\npush world\npush !!\nsize\npop\npop\npop\nexit\n", "ok\nok\nok\n3\n!!\nworld\nhello\nbye\n", "24");
+        run_test("push hello\npush world\npush ABCD\nsize\npop\npop\npop\nexit\n", "ok\nok\nok\n3\nABCD\nworld\nhello\nbye\n", "24");
         run_test("push 123\npush 456\nback\nclear\nsize\nexit\n", "ok\nok\n456\nok\n0\nbye\n", "25");
         run_test("push element\npush another\nclear\nsize\npush final\nback\nexit\n", "ok\nok\nok\n0\nok\nfinal\nbye\n", "26");
         run_test("push 1\npush 2\npush 3\npush 4\npop\npop\nback\nexit\n", "ok\nok\nok\nok\n4\n3\n2\nbye\n", "27");

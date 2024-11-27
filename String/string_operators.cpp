@@ -1,4 +1,5 @@
 #include "string.h"
+/*
 //Операторы:
 std::istream& operator>>(std::istream& in, String& other);
 
@@ -17,3 +18,4 @@ bool operator>(const String& first, const String& second);
 bool operator>=(const String& first, const String& second);
 
 bool operator<=(const String& first, const String& second);
+*/

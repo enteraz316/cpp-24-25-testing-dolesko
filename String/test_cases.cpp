@@ -76,8 +76,8 @@ void test_cases::empty_string() {
     ASSERT(string.length() == 0, "empty_string", "string.length() == 0");
     ASSERT(string.empty(), "empty_string", "string.empty()");
     ulong inf = string.size(); //for std::string  string.size() -> -1
-    ASSERT(string.find("booya") == inf, "empty_string", "string.find(\"booya\") == -1");
-    ASSERT(string.rfind("ayoob") == inf, "empty_string", "string.rfind(\"ayoob\") == -1");
+    ASSERT(string.find("booya") == inf, "empty_string", "string.find(\"booya\") == string.size()");
+    ASSERT(string.rfind("ayoob") == inf, "empty_string", "string.rfind(\"ayoob\") == string.size()");
 
     String string2;
     ASSERT(string2 == string, "empty_string", "string2 == string");
@@ -256,8 +256,8 @@ void test_cases::find_rfind() {
     ASSERT(string.rfind('t') == 6, "find_rfind", "string.rfind('t') == 6");
 
     ulong inf = string.size(); //for std::string  string.size() -> -1
-    ASSERT(string.find("popopo") == inf, "find_rfind", "string.find(\"popopo\") == -1");
-    ASSERT(string.rfind("popopo") == inf, "find_rfind", "string.rfind(\"popopo\") == -1");
+    ASSERT(string.find("popopo") == inf, "find_rfind", "string.find(\"popopo\") == string.size()");
+    ASSERT(string.rfind("popopo") == inf, "find_rfind", "string.rfind(\"popopo\") == string.size()");
 }
 /*
  In construction

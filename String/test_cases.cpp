@@ -56,7 +56,7 @@ void test_cases::operator_symbol_by_index_set_value() {
     ASSERT(string.data()[0] == 's', "operator_symbol_by_index_set_value", "string.data()[0] == 's'");
 }
 
-void test_cases::check_equal(const String &string1, const String &string2, const char* func_name) {
+void test_cases::check_equal(const String& string1, const String& string2, const char* func_name) {
     ASSERT(string1.size() == string2.size(), func_name, "string1.size() == string2.size()");
     ASSERT(string1 == string2, func_name, "string1 == string2");
     for (ulong i = 0; i < std::max(string2.size(), string1.size()); i++) {

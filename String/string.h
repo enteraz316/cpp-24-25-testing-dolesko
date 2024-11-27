@@ -1,13 +1,9 @@
+#pragma once
+#include <string>
 using String = std::string;
 
 
-
 // class "String" implementation
-#pragma once
-
-#include <algorithm>
-#include <cstring>
-#include <iostream>
 
 // class String {};
 

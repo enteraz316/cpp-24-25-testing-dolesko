@@ -252,8 +252,8 @@ void test_cases::back_front() {
 void test_cases::find_rfind() {
     String string("test string");
 
-    ASSERT(string.find('t') == 0, "find_rfind", "string.find('t') == 0");
-    ASSERT(string.rfind('t') == 6, "find_rfind", "string.rfind('t') == 6");
+    ASSERT(string.find("t") == 0, "find_rfind", "string.find("t) == 0");
+    ASSERT(string.rfind("t") == 6, "find_rfind", "string.rfind("t") == 6");
 
     ulong inf = string.size(); //for std::string  string.size() -> -1
     ASSERT(string.find("popopo") == inf, "find_rfind", "string.find(\"popopo\") == string.size()");
@@ -265,11 +265,11 @@ void test_cases::find_rfind_hardcore() {
     String string("test string");
     string[4] = '\0';
 
-    ASSERT(string.find('t') == 0, "find_rfind_hardcore", "string.find('t') == 0");
-    ASSERT(string.rfind('t') == 6, "find_rfind_hardcore", "string.rfind('t') == 6");
+    ASSERT(string.find("t") == 0, "find_rfind_hardcore", "string.find("t") == 0");
+    ASSERT(string.rfind("t") == 6, "find_rfind_hardcore", "string.rfind("t") == 6");
 
-    ASSERT(string.find('n') == 9, "find_rfind_hardcore", "string.find('n') == 9");
-    ASSERT(string.rfind('e') == 1, "find_rfind_hardcore", "string.rfind('e') == 1");
+    ASSERT(string.find("n") == 9, "find_rfind_hardcore", "string.find("n") == 9");
+    ASSERT(string.rfind("e") == 1, "find_rfind_hardcore", "string.rfind("e") == 1");
 
     ASSERT(string.find("popopo") == string.length(), "find_rfind_hardcore", "string.find(\"popopo\") == string.length()");
     ASSERT(string.rfind("popopo") == string.length(), "find_rfind_hardcore", "string.rfind(\"popopo\") == string.length()");

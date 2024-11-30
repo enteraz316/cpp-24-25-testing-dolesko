@@ -3,7 +3,7 @@
 #include <sstream>
 
 #include "test_cases.h"
-#include "string_operators.cpp"
+#include "string.h"
 
 #define ASSERT(statement, func_name, statement_string)	\
 if(!(statement)) {						 			    \
@@ -56,7 +56,7 @@ void test_cases::operator_symbol_by_index_set_value() {
     ASSERT(string.data()[0] == 's', "operator_symbol_by_index_set_value", "string.data()[0] == 's'");
 }
 
-void test_cases::check_equal(const String& string1, const String& string2, const char* func_name) {
+void check_equal(const String& string1, const String& string2, const char* func_name) {
     ASSERT(string1.size() == string2.size(), func_name, "string1.size() == string2.size()");
     ASSERT(string1 == string2, func_name, "string1 == string2");
     for (ulong i = 0; i < std::max(string2.size(), string1.size()); i++) {
@@ -64,7 +64,7 @@ void test_cases::check_equal(const String& string1, const String& string2, const
     }
 }
 
-void test_cases::check_empty(const String &string, const char* func_name) {
+void check_empty(const String &string, const char* func_name) {
     ASSERT(string.size() == 0, func_name, "string.size() == 0");
     ASSERT(string.length() == 0, func_name, "string.length() == 0");
     ASSERT(string.empty(), func_name, "string.empty()");

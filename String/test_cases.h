@@ -1,5 +1,4 @@
 #pragma once
-#include "string.h"
 
 class test_cases {
 public:
@@ -25,10 +24,6 @@ public:
     void find_rfind();
     void find_rfind_hardcore();
     void shrink_to_fit_test();
-
-private:
-    void check_equal(const String &string1, const String &string2, const char* func_name);
-    void check_empty(const String &string, const char* func_name);
 };
 
 

@@ -252,8 +252,8 @@ void test_cases::back_front() {
 void test_cases::find_rfind() {
     String string("test string");
 
-    ASSERT(string.find("t") == 0, "find_rfind", "string.find("t") == 0");
-    ASSERT(string.rfind("t") == 6, "find_rfind", "string.rfind("t") == 6");
+    ASSERT(string.find("t") == 0, "find_rfind", "string.find(\"t\") == 0");
+    ASSERT(string.rfind("t") == 6, "find_rfind", "string.rfind(\"t\") == 6");
 
     ulong inf = string.size(); //for std::string  string.size() -> -1
     ASSERT(string.find("popopo") == inf, "find_rfind", "string.find(\"popopo\") == string.size()");

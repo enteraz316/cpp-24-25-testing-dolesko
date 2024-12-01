@@ -1,8 +1,8 @@
 #include "test_driver.h"
 #include <iostream>
 
-int main(int, char** argv  ) {
+int main() {
     //Tests by Dolesko
-    test_driver driver(argv[1], argv[2]);
+    test_driver driver;
     driver.start_testing();
 }

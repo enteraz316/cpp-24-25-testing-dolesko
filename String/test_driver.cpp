@@ -5,8 +5,7 @@
 #include <memory>
 
 
-test_driver::test_driver(bool stop_after_fail, bool hardcore) : total_passed_tests(0), total_failed_tests(0),
-                                                                stop_after_fail(stop_after_fail), hardcore(hardcore) {
+test_driver::test_driver() : total_passed_tests(0), total_failed_tests(0) {
     add_tests();
 }
 

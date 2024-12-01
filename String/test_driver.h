@@ -4,7 +4,7 @@
 
 class test_driver {
 public:
-    test_driver(bool stop_after_fail, bool hardcore);
+    test_driver();
 
     ~test_driver();
 
@@ -16,6 +16,4 @@ private:
     std::vector<std::pair<std::function<void()>, const char*>> test_list;
     int total_passed_tests;
     int total_failed_tests;
-    bool stop_after_fail;
-    bool hardcore;
 };

@@ -59,7 +59,7 @@ void test_cases::operator_symbol_by_index_set_value() {
 void check_equal(const String& string1, const String& string2, const char* func_name) {
     ASSERT(string1.size() == string2.size(), func_name, "string1.size() == string2.size()");
     ASSERT(string1 == string2, func_name, "string1 == string2");
-    for (ulong i = 0; i < std::max(string2.size(), string1.size()); i++) {
+    for (unsigned long i = 0; i < std::max(string2.size(), string1.size()); i++) {
         ASSERT(string1[i] == string2[i], func_name, "string1[i] == string2[i]");
     }
 }
@@ -75,7 +75,7 @@ void test_cases::empty_string() {
     ASSERT(string.size() == 0, "empty_string", "string.size() == 0");
     ASSERT(string.length() == 0, "empty_string", "string.length() == 0");
     ASSERT(string.empty(), "empty_string", "string.empty()");
-    ulong inf = string.size(); //for std::string  string.size() -> -1
+    unsigned long inf = string.size(); //for std::string  string.size() -> -1
     ASSERT(string.find("booya") == inf, "empty_string", "string.find(\"booya\") == string.size()");
     ASSERT(string.rfind("ayoob") == inf, "empty_string", "string.rfind(\"ayoob\") == string.size()");
 
@@ -255,7 +255,7 @@ void test_cases::find_rfind() {
     ASSERT(string.find("t") == 0, "find_rfind", "string.find(\"t\") == 0");
     ASSERT(string.rfind("t") == 6, "find_rfind", "string.rfind(\"t\") == 6");
 
-    ulong inf = string.size(); //for std::string  string.size() -> -1
+    unsigned long inf = string.size(); //for std::string  string.size() -> -1
     ASSERT(string.find("popopo") == inf, "find_rfind", "string.find(\"popopo\") == string.size()");
     ASSERT(string.rfind("popopo") == inf, "find_rfind", "string.rfind(\"popopo\") == string.size()");
 }

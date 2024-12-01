@@ -1,7 +1,7 @@
 CXX := g++
-CXXFLAGS := -Wall -Wextra -g -fsanitize=address,undefined,leak
+CXXFLAGS := -std=c++20 -Wall -Wextra -g -fsanitize=address,undefined#,leak
 
-STOP_AFTER_FAIL ?= 1
+STOP_AFTER_FAIL ?= 0
 HARDCORE_TESTING ?= 1
 
 CPPFLAGS := -DSTOP_AFTER_FAIL=$(STOP_AFTER_FAIL) -DHARDCORE_TESTING=$(HARDCORE_TESTING)
